@@ -1,0 +1,42 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# testing
+coverage
+test-results
+
+# misc
+.DS_Store
+Thumbs.db
+*.pem
+
+# output
+.output
+.vercel
+.netlify
+.svelte-kit
+.wrangler
+build
+dist
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+vite.config.*.timestamp-*
+
+# env files
+.env
+.env.*
+!.env.example
+!.env.test
+
+# turbo
+.turbo
+
+# IDE
+.idea

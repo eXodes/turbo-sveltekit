@@ -1,0 +1,5 @@
+{
+  "extends": "typescript-config/default.json",
+  "include": ["./*.ts", "./src/*.ts", "./src/**/*.js", "./src/**/*.ts", "./turbo/**/*.ts"],
+  "exclude": ["./node_modules/**", "./dist/**"]
+}

@@ -1,0 +1,13 @@
+name: "Release"
+description: "Release versioning for production"
+runs:
+  using: "node20"
+  main: "./index.js"
+inputs:
+  type:
+    description: "Versioning type"
+    required: true
+    default: patch
+outputs:
+  tag:
+    description: "The tag version of the release"

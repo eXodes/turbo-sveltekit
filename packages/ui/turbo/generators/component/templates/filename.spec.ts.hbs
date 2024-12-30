@@ -1,0 +1,11 @@
+import {{ pascalCase name }} from "./{{ name }}.svelte";
+import { render } from "@testing-library/svelte";
+import { describe, expect, test } from "vitest";
+
+describe("{{ pascalCase name }}", () => {
+  test("should render component", async () => {
+    const { container } = render({{ pascalCase name }});
+
+    expect(container.children).toMatchSnapshot();
+  });
+});

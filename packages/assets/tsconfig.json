@@ -1,0 +1,5 @@
+{
+  "extends": "typescript-config/svelte.json",
+  "include": ["./src/*.ts", "./src/**/*.webp"],
+  "exclude": ["./node_modules/**", "./dist/**"]
+}

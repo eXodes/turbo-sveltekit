@@ -1,0 +1,43 @@
+{
+  "name": "turbo-sveltekit",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/**/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "check": "turbo run check --continue",
+    "clean": "turbo run clean && rm -rf node_modules  .turbo",
+    "dev": "turbo run dev",
+    "emulators": "turbo run emulators",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "turbo run lint --continue",
+    "prepare": "turbo run prepare && is-ci || husky",
+    "test": "turbo run test --continue"
+  },
+  "devDependencies": {
+    "@actions/core": "^1.11.1",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@testing-library/svelte": "^5.2.6",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.0",
+    "@turbo/gen": "^2.3.3",
+    "commitlint-config-monorepo": "^2.0.2",
+    "husky": "^9.1.7",
+    "is-ci": "^4.1.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-packagejson": "^2.5.6",
+    "prettier-plugin-svelte": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "svelte": "^5.16.0",
+    "turbo": "^2.3.3",
+    "turbo-utils": "*",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "npm@11.0.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

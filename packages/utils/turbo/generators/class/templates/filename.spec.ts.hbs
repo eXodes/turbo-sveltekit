@@ -1,0 +1,10 @@
+import { {{ pascalCase name }} } from "./{{ name }}{{#if svelte}}.svelte{{/if}}";
+import { describe, expect, test } from "vitest";
+
+describe("{{ pascalCase name }}", () => {
+  test("should return output", async () => {
+    const output = new {{ pascalCase name }}();
+
+    expect(output).toMatchInlineSnapshot();
+  });
+});

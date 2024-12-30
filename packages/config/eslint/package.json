@@ -1,0 +1,29 @@
+{
+  "name": "eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./default.mjs",
+    "./svelte": "./svelte.mjs"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules .turbo"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.17.0",
+    "@typescript-eslint/parser": "^8.18.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-turbo": "^2.3.3",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-svelte": "^2.46.1",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "globals": "^15.14.0",
+    "svelte-eslint-parser": "^0.43.0",
+    "typescript-config": "*",
+    "typescript-eslint": "^8.18.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

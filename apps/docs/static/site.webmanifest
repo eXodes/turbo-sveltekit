@@ -1,0 +1,19 @@
+{
+  "name": "Visual Arts Expo Ticketing",
+  "short_name": "VAX Ticketing",
+  "icons": [
+    {
+      "src": "/images/metadata/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/metadata/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffcc00",
+  "background_color": "#330066",
+  "display": "standalone"
+}
