@@ -1,23 +1,20 @@
 import { svelte } from "@sveltejs/vite-plugin-svelte";
-import path from "node:path";
+import { svelteTesting } from "@testing-library/svelte/vite";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   build: {
-    lib: {
-      entry: path.resolve(import.meta.dirname, "src/index.ts"),
-      name: "index",
-      fileName: "index",
+    rollupOptions: {
+      external: ["svelte", "zod"],
     },
   },
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore - this is a valid Vite config
-  plugins: [svelte()],
+  plugins: [svelte(), svelteTesting()],
   resolve: process.env.VITEST ? { conditions: ["browser"] } : undefined,
   test: {
     globals: true,
     environment: "jsdom",
     setupFiles: ["./vitest.setup.ts"],
+    include: ["src/**/*.spec.ts"],
     passWithNoTests: true,
   },
 });

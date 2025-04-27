@@ -1,5 +1,9 @@
 {
-  "extends": "typescript-config/default.json",
+  "extends": "typescript-config/svelte.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true
+  },
   "include": ["./*.ts", "./src/*.ts", "./src/**/*.js", "./src/**/*.ts", "./turbo/**/*.ts"],
   "exclude": ["./node_modules/**", "./dist/**"]
 }

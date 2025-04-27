@@ -1,0 +1,18 @@
+<script lang="ts">
+  import { Body, Container, Head, Html, Preview } from 'svelte-email-tailwind';
+
+  interface Props {
+    data: unknown;
+  }
+
+  let { data }: Props = $props();
+</script>
+
+<Html lang="en">
+  <Head />
+  <Preview preview="" />
+
+  <Body class="bg-purple font-sans">
+    <Container></Container>
+  </Body>
+</Html>

@@ -1,0 +1,11 @@
+<script lang="ts">
+{{#if load}}
+  import type { LayoutData } from './$types';
+
+  interface Props {
+    data: LayoutData;
+  }
+
+  let { data }: Props = $props();
+{{/if}}
+</script>

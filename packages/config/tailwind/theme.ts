@@ -1,3 +1,5 @@
+import type { Config } from "tailwindcss";
+
 export const theme = {
   screens: {
     xs: "375px",
@@ -17,4 +19,4 @@ export const theme = {
   scale: {
     "98": "0.98",
   },
-};
+} satisfies Config["theme"];

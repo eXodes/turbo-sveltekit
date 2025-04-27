@@ -1,9 +1,0 @@
-import { expect, test } from "@playwright/test";
-
-test.describe("{{ pascalCase name }} ({{ route }})", () => {
-  test("has expected title", async ({ page }) => {
-    await page.goto("{{ route }}");
-
-    await expect(page).toHaveTitle(/{{ pascalCase name }} | Visual Arts Expo/);
-  });
-});

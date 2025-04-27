@@ -18,22 +18,12 @@ export const rules = {
   ],
   "turbo/no-undeclared-env-vars": [
     "error",
-    {
-      allowList: [
-        "NODE_ENV",
-        "APP_ENV",
-        "VERCEL_URL",
-        "DATABASE_URL",
-        "AUTH_SECRET",
-        "SALT_ROUNDS",
-        "RESEND_API_KEY",
-        "MAIL_FROM",
-      ],
-    },
+    { allowList: ["NODE_ENV", "SITE_URL", "DATABASE_URL"] },
   ],
   "unicorn/better-regex": "warn",
   "unicorn/prefer-top-level-await": "off",
   "unicorn/prevent-abbreviations": "off",
   "unicorn/no-null": "off",
   "unicorn/prefer-string-raw": "off",
+  "unicorn/catch-error-name": ["error", { ignore: ["^err\\d*$", "^error\\d*$", /^ignore/i] }],
 };

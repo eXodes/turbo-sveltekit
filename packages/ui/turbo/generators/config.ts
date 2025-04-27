@@ -1,6 +1,6 @@
-import { componentConfig } from "./component/config";
 import { PlopTypes } from "@turbo/gen";
+import { getComponentConfig } from "turbo-utils/generator";
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
-  plop.setGenerator("component", componentConfig);
+  plop.setGenerator("ui:component", getComponentConfig("packages"));
 }

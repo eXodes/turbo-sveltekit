@@ -1,0 +1,4 @@
+export const {{ pascalCase name }}Enum = {} as const;
+
+export type I{{ pascalCase name }}Enum =
+(typeof {{ pascalCase name }}Enum)[keyof typeof {{ pascalCase name }}Enum];

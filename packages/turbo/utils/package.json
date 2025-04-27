@@ -4,21 +4,21 @@
   "private": true,
   "type": "commonjs",
   "exports": {
+    "./generator": "./src/generators/index.ts",
     "./prompt": "./src/prompt.ts",
     "./scope": "./src/scope.ts"
   },
   "scripts": {
-    "build": "tsup",
-    "clean": "rm -rf node_modules .turbo dist",
-    "lint": "eslint . --max-warnings 0",
-    "prepare": "tsup"
+    "clean": "rm -rf node_modules .turbo",
+    "lint": "eslint . --max-warnings 0"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@types/lodash": "^4.17.13",
+    "@turbo/gen": "^2.5.2",
+    "@types/lodash": "^4.17.16",
     "eslint-config": "*",
     "lodash": "^4.17.21",
-    "tsup": "^8.3.5",
     "typescript-config": "*",
-    "typescript-eslint": "^8.18.2"
+    "typescript-eslint": "^8.31.0"
   }
 }

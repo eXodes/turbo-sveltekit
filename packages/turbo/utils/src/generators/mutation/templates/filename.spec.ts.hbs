@@ -1,0 +1,10 @@
+import { {{ camelCase name }} } from "./{{ name }}.server";
+import { describe, expect, test } from "vitest";
+
+describe("{{ camelCase name }}", () => {
+  test("should return data", async () => {
+    const data = await {{ camelCase name }}();
+
+    expect(data).toMatchInlineSnapshot();
+  });
+});

@@ -3,7 +3,6 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "env": ["BASE_PATH"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".svelte-kit/**", ".vercel/**", "dist/**"]
     },
@@ -11,6 +10,7 @@
     "check": {},
     "lint": {},
     "test": {},
+    "test:ci": {},
     "dev": {
       "cache": false,
       "persistent": true

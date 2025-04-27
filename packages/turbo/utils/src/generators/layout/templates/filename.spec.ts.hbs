@@ -1,0 +1,5 @@
+import { expect, test } from "@playwright/test";
+
+test("has expected layout", async ({ page }) => {
+  await page.goto("{{ route }}");
+});

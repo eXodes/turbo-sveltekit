@@ -1,5 +1,5 @@
 {
-  "name": "turbo-sveltekit",
+  "name": "edda",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -8,35 +8,31 @@
   "scripts": {
     "build": "turbo run build",
     "check": "turbo run check --continue",
-    "clean": "turbo run clean && rm -rf node_modules  .turbo",
+    "clean": "turbo run clean && rm -rf node_modules",
     "dev": "turbo run dev",
-    "emulators": "turbo run emulators",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "gen": "turbo gen",
+    "postinstall": "turbo run prepare && is-ci || husky",
     "lint": "turbo run lint --continue",
-    "prepare": "turbo run prepare && is-ci || husky",
-    "test": "turbo run test --continue"
+    "test": "turbo run test --continue",
+    "test:ci": "turbo run test:ci --continue"
   },
   "devDependencies": {
-    "@actions/core": "^1.11.1",
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@testing-library/svelte": "^5.2.6",
-    "@trivago/prettier-plugin-sort-imports": "^5.2.0",
-    "@turbo/gen": "^2.3.3",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "commitlint-config-monorepo": "^2.0.2",
     "husky": "^9.1.7",
     "is-ci": "^4.1.0",
-    "prettier": "^3.4.2",
-    "prettier-plugin-packagejson": "^2.5.6",
-    "prettier-plugin-svelte": "^3.3.2",
-    "prettier-plugin-tailwindcss": "^0.6.9",
-    "svelte": "^5.16.0",
-    "turbo": "^2.3.3",
-    "turbo-utils": "*",
-    "typescript": "^5.7.2"
+    "prettier": "^3.5.3",
+    "prettier-plugin-packagejson": "^2.5.10",
+    "prettier-plugin-svelte": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "turbo": "^2.5.2",
+    "typescript": "^5.8.3"
   },
-  "packageManager": "npm@11.0.0",
+  "packageManager": "npm@11.3.0",
   "engines": {
     "node": ">=20"
   }

@@ -1,6 +1,8 @@
 import { PlopTypes } from "@turbo/gen";
 import { kebabCase, startCase } from "lodash/fp";
 
+export type TargetGroup = "apps" | "packages";
+
 function transformName(input: string) {
   const names = input.split(".");
 
@@ -62,32 +64,34 @@ function transformPath(input: string) {
 }
 
 interface ValidateOptions {
-  route?: boolean;
-  subDirectory?: boolean;
+  required?: boolean;
+  slash?: boolean;
+  nested?: boolean;
   extension?: boolean;
   space?: boolean;
-  required?: boolean;
+  api?: boolean;
 }
 
 function validate(input: string, target: string, options: ValidateOptions = {}) {
   const {
-    route = false,
-    subDirectory = false,
+    required = true,
+    nested = true,
+    slash = false,
     extension = false,
     space = false,
-    required = true,
+    api = false,
   } = options;
 
   if (required && !input) {
     return `${startCase(target)} is required`;
   }
 
-  if (route && !input.startsWith("/")) {
+  if (slash && !input.startsWith("/")) {
     return `${startCase(target)} must start with a slash`;
   }
 
-  if (subDirectory && input.includes("/")) {
-    return `${startCase(target)} cannot include a sub-directory`;
+  if (!nested && input.includes("/")) {
+    return `${startCase(target)} route/directory cannot be nested`;
   }
 
   if (extension && !input.includes(".")) {
@@ -100,6 +104,10 @@ function validate(input: string, target: string, options: ValidateOptions = {}) 
     return `${startCase(target)} must include spaces`;
   } else if (!space && input.includes(" ")) {
     return `${startCase(target)} cannot include spaces`;
+  }
+
+  if (api && !input.startsWith("/api")) {
+    return `${startCase(target)} must start with /api`;
   }
 
   return true;
@@ -124,7 +132,19 @@ export function generateRoutePrompt(generatorName: string): PlopTypes.PromptQues
     message: `What should be the route for this ${generatorName}?`,
     filter: transformPath,
     validate(input: string) {
-      return validate(input, "route", { route: true });
+      return validate(input, "route", { slash: true });
+    },
+  };
+}
+
+export function generateApiRoutePrompt(generatorName: string): PlopTypes.PromptQuestion {
+  return {
+    type: "input",
+    name: "route",
+    message: `What should be the route for this ${generatorName}?`,
+    filter: transformPath,
+    validate(input: string) {
+      return validate(input, "route", { slash: true, api: true });
     },
   };
 }
@@ -142,8 +162,17 @@ export function generateServerPrompt(): PlopTypes.PromptQuestion {
   return {
     type: "confirm",
     name: "server",
-    message: "Should the data be fetched on the server?",
+    message: "Is this a server file?",
     default: false,
+  };
+}
+
+export function generateMethodPrompt(): PlopTypes.PromptQuestion {
+  return {
+    type: "list",
+    name: "method",
+    message: "What should be the method for this API?",
+    choices: ["GET", "POST", "PUT", "DELETE"],
   };
 }
 
@@ -154,23 +183,10 @@ export function generateDirectoryPrompt(
   return {
     type: "input",
     name: "directory",
-    message: `What should be the directory for this ${generator}? ${required ? "" : "(optional)"}`,
+    message: `What should be the directory for this ${generator}?`,
+    default: "/",
     filter: transformPath,
-    validate: (input: string) => {
-      if (input.startsWith("/")) {
-        return "Route cannot start with a slash";
-      }
-      if (input.includes(".")) {
-        return "Route cannot include an extension";
-      }
-      if (input.includes(" ")) {
-        return "Directory name cannot include spaces";
-      }
-      if (required && !input) {
-        return "Directory is required";
-      }
-      return true;
-    },
+    validate: (input: string) => validate(input, "directory", { slash: true, required }),
   };
 }
 

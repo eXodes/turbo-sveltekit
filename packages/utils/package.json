@@ -4,40 +4,57 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "svelte": "./src/index.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.umd.cjs"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./counter": {
+      "types": "./dist/counter/counter.svelte.d.ts",
+      "svelte": "./dist/counter/counter.svelte.js"
     }
   },
-  "main": "src/index.ts",
-  "module": "src/index.ts",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*",
+    "src/lib",
+    "!src/lib/**/*.test.*",
+    "!src/lib/**/*.spec.*"
+  ],
   "scripts": {
-    "build": "vite build",
+    "build": "svelte-package -i src",
     "check": "tsc --noEmit -p ./tsconfig.json",
     "check:watch": "tsc --noEmit -p ./tsconfig.json --watch",
-    "clean": "rm -rf node_modules .turbo dist",
-    "dev": "vite build --watch",
-    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf node_modules .turbo .svelte-kit dist",
+    "dev": "svelte-package -i src -w",
+    "lint": "eslint . --max-warnings 0 && publint",
+    "prepare": "npm run build",
     "test": "vitest run",
+    "test:ci": "vitest",
     "test:ui": "vitest --ui"
   },
-  "dependencies": {},
+  "dependencies": {
+    "zod": "^3.24.3"
+  },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.17.0",
+    "@eslint/compat": "^1.2.8",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.25.1",
+    "@sveltejs/package": "^2.3.11",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@testing-library/jest-dom": "^6.6.3",
-    "@vitest/ui": "^2.1.8",
+    "@testing-library/svelte": "^5.2.7",
+    "@vitest/ui": "^3.1.2",
     "eslint-config": "*",
-    "jsdom": "^25.0.1",
+    "jsdom": "^26.1.0",
+    "publint": "^0.3.12",
     "turbo-utils": "*",
     "typescript-config": "*",
-    "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.6",
-    "vitest": "^2.1.8"
+    "typescript-eslint": "^8.31.0",
+    "vite": "^6.3.3",
+    "vitest": "^3.1.2"
   },
   "peerDependencies": {
-    "svelte": "^5.16.0"
+    "svelte": "^5.28.2"
   }
 }

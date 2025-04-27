@@ -5,5 +5,10 @@ export default tsEslint.config(
   {
     ignores: ["**/.*.js", "**/node_modules/", "**/dist/"],
   },
-  ...baseConfig
+  ...baseConfig,
+  {
+    rules: {
+      "unicorn/prefer-module": "off",
+    },
+  }
 );

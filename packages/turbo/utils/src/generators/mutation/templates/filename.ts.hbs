@@ -1,0 +1,7 @@
+import { Transaction } from "../../db/types";
+
+interface {{ pascalCase name }}Params {
+  tx: Transaction;
+}
+
+export async function {{ camelCase name }}({ tx }: {{ pascalCase name }}Params): Promise<null> {}

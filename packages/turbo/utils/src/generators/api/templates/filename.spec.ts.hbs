@@ -1,0 +1,11 @@
+import { expect, test } from "@playwright/test";
+
+test.describe("{{ method }}", () => {
+  test("has expected response", async ({ request }) => {
+    const response = await request.{{ lowerCase method }}("{{ route }}");
+    expect(response.status()).toBe(200);
+
+    const body = await response.json();
+    expect(body).toMatchObject({ success: true });
+  });
+});

@@ -1,0 +1,9 @@
+import { Database } from "../../db/types";
+
+interface {{ pascalCase name }}Params {
+  db: Database;
+}
+
+export async function {{ camelCase name }}({ db }: {{ pascalCase name }}Params): Promise<null> {
+  return null;
+}
