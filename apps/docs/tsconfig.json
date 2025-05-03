@@ -30,7 +30,8 @@
     "./tests/**/*.ts",
     "./tests/**/*.svelte",
     "./turbo/**/*.ts",
-    "./tailwind.config.ts"
+    "./tailwind.config.ts",
+    "./.storybook/*.ts"
   ],
   "exclude": [
     "./node_modules/**",

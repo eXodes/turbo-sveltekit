@@ -13,7 +13,10 @@ interface PromptsData {
   export: boolean;
 }
 
-export function getComponentConfig(target: TargetGroup): PlopTypes.PlopGeneratorConfig {
+export function getComponentConfig(
+  target: TargetGroup,
+  project: string
+): PlopTypes.PlopGeneratorConfig {
   const isApp = target === "apps";
 
   const sourcePath = isApp ? "src/lib" : "src";
@@ -27,6 +30,7 @@ export function getComponentConfig(target: TargetGroup): PlopTypes.PlopGenerator
       const exporting = await inquirer.prompt([generateExportPrompt()]);
 
       return {
+        project,
         ...name,
         ...directory,
         ...exporting,
@@ -37,6 +41,11 @@ export function getComponentConfig(target: TargetGroup): PlopTypes.PlopGenerator
         type: "add",
         path: `${sourcePath}${componentPath}{{ directory }}{{ dashCase name }}/{{ dashCase name }}.svelte`,
         templateFile: path.resolve(__dirname, "templates/filename.svelte.hbs"),
+      },
+      {
+        type: "add",
+        path: `${sourcePath}${componentPath}{{ directory }}{{ dashCase name }}/{{ dashCase name }}.stories.svelte`,
+        templateFile: path.resolve(__dirname, "templates/filename.stories.svelte.hbs"),
       },
       {
         type: "add",

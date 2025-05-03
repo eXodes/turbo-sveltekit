@@ -11,7 +11,8 @@ A Turbo monorepo repository with Sveltekit.
 - [x] [TailwindCSS](http://tailwindcss.com)
 - [x] [Vitest](http://vitest.dev)
 - [x] [Playwright](http://playwright.dev)
-- [ ] [Storybook](https://storybook.js.org)
+- [x] [Storybook](https://storybook.js.org)
+- [x] [i18n](https://github.com/ivanhofer/typesafe-i18n)
 - [x] [Husky](https://typicode.github.io/husky/)
 - [x] [Commitlint](http://commitlint.js.org)
 - [x] [Conventional Commits](https://www.conventionalcommits.org)
@@ -30,10 +31,13 @@ A Turbo monorepo repository with Sveltekit.
 | `bits-ui`                 | ![v1.3.19](https://img.shields.io/badge/npm-v1.3.19-blue) |
 | `eslint`                  | ![v9.25.1](https://img.shields.io/badge/npm-v9.25.1-blue) |
 | `husky`                   | ![v9.1.7](https://img.shields.io/badge/npm-v9.1.7-blue)   |
+| `js-cookie`               | ![v3.0.5](https://img.shields.io/badge/npm-v3.0.5-blue)   |
 | `prettier`                | ![v3.5.3](https://img.shields.io/badge/npm-v3.5.3-blue)   |
+| `storybook`               | ![v8.6.12](https://img.shields.io/badge/npm-v8.6.12-blue) |
 | `svelte`                  | ![v5.28.2](https://img.shields.io/badge/npm-v5.28.2-blue) |
 | `tailwindcss`             | ![v4.1.4](https://img.shields.io/badge/npm-v4.1.4-blue)   |
 | `turbo`                   | ![v2.5.2](https://img.shields.io/badge/npm-v2.5.2-blue)   |
+| `typesafe-i18n`           | ![v5.26.2](https://img.shields.io/badge/npm-v5.26.2-blue) |
 | `typescript`              | ![v5.8.3](https://img.shields.io/badge/npm-v5.8.3-blue)   |
 | `vite`                    | ![v6.3.3](https://img.shields.io/badge/npm-v6.3.3-blue)   |
 | `vitest`                  | ![v3.1.2](https://img.shields.io/badge/npm-v3.1.2-blue)   |
@@ -44,7 +48,7 @@ A Turbo monorepo repository with Sveltekit.
 ```
 . - Root directory of the repository
 ├── apps
-│   ├── docs - Documentation
+│   ├── docs - Storybook application
 │   └── web - Web application
 └── packages
     ├── assets - Assets
@@ -52,6 +56,7 @@ A Turbo monorepo repository with Sveltekit.
     │   ├── eslint - ESLint configuration
     │   ├── tailwind - TailwindCSS configuration
     │   └── typescript - Typescript configuration
+    ├── locale - i18n locale files
     ├── turbo - Turbo helpers
     │   └── utils - Turbo utilities
     ├── ui - UI components

@@ -25,3 +25,6 @@ yarn.lock
 
 # Test
 test-results
+
+# Locale
+i18n-*.ts

@@ -33,12 +33,12 @@ export function getPageConfig(): PlopTypes.PlopGeneratorConfig {
     actions: [
       {
         type: "add",
-        path: "src/routes/{{ route }}/+page.svelte",
+        path: "src/routes{{ route }}/+page.svelte",
         templateFile: path.resolve(__dirname, "templates/filename.svelte.hbs"),
       },
       {
         type: "add",
-        path: "src/routes/{{ route }}/+page.ts",
+        path: "src/routes{{ route }}/+page.ts",
         templateFile: path.resolve(__dirname, "templates/filename.ts.hbs"),
         skip(data: PromptsData) {
           if (!data.load) return "";
@@ -47,7 +47,7 @@ export function getPageConfig(): PlopTypes.PlopGeneratorConfig {
       },
       {
         type: "add",
-        path: "src/routes/{{ route }}/+page.server.ts",
+        path: "src/routes{{ route }}/+page.server.ts",
         templateFile: path.resolve(__dirname, "templates/filename.server.ts.hbs"),
         skip(data: PromptsData) {
           if (!data.load) return "";
@@ -56,7 +56,7 @@ export function getPageConfig(): PlopTypes.PlopGeneratorConfig {
       },
       {
         type: "add",
-        path: "tests/{{ route }}/+page.spec.ts",
+        path: "tests{{ route }}/+page.spec.ts",
         templateFile: path.resolve(__dirname, "templates/filename.spec.ts.hbs"),
       },
     ],

@@ -1,0 +1,6 @@
+{
+  "esmImports": true,
+  "outputPath": "./src",
+  "adapters": ["svelte"],
+  "$schema": "https://unpkg.com/typesafe-i18n@5.26.2/schema/typesafe-i18n.json"
+}

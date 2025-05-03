@@ -1,5 +1,6 @@
 <script lang="ts">
   import { SvelteIcon } from "assets";
+  import LL from "locale/i18n-svelte";
   import { Button } from "ui";
   import { Counter } from "utils";
 
@@ -17,10 +18,10 @@
     class="h-32 w-32"
   />
 
-  <h1 class="text-xl">Welcome to the Web app!</h1>
+  <h1 class="text-xl">{$LL.greeting({ name: "Web" })}</h1>
 
   <div class="flex flex-col items-center gap-2">
-    <p>Counter: {counter.count}</p>
-    <Button onclick={() => counter.increment()}>Click me!</Button>
+    <p>{$LL.counter({ count: counter.count })}</p>
+    <Button onclick={() => counter.increment()}>{$LL.button()}</Button>
   </div>
 </div>

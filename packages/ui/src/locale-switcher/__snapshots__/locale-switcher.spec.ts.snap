@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LocaleSwitcher > should render component 1`] = `
+HTMLCollection [
+  <select
+    aria-label=""
+    class="rounded-lg text-sm focus-visible:border-orange-600 focus-visible:ring-orange-600"
+  >
+    <option
+      value="en"
+    >
+      EN
+    </option>
+    <option
+      value="ms"
+    >
+      MS
+    </option>
+    
+  </select>,
+]
+`;

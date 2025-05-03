@@ -63,6 +63,18 @@ function transformPath(input: string) {
   return paths.map((path) => transformName(path)).join("/");
 }
 
+function transformDirectory(input: string) {
+  const paths = input.split("/");
+
+  if (paths.length === 1) {
+    return kebabCase(paths[0]!);
+  }
+
+  const fullPath = paths.map((path) => transformName(path)).join("/");
+
+  return fullPath === "/" ? fullPath : `${fullPath}/`;
+}
+
 interface ValidateOptions {
   required?: boolean;
   slash?: boolean;
@@ -130,6 +142,7 @@ export function generateRoutePrompt(generatorName: string): PlopTypes.PromptQues
     type: "input",
     name: "route",
     message: `What should be the route for this ${generatorName}?`,
+    default: "/",
     filter: transformPath,
     validate(input: string) {
       return validate(input, "route", { slash: true });
@@ -185,7 +198,7 @@ export function generateDirectoryPrompt(
     name: "directory",
     message: `What should be the directory for this ${generator}?`,
     default: "/",
-    filter: transformPath,
+    filter: transformDirectory,
     validate: (input: string) => validate(input, "directory", { slash: true, required }),
   };
 }

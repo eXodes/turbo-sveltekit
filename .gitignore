@@ -13,6 +13,7 @@ node_modules
 .svelte-kit
 build
 dist
+storybook-static
 
 # OS
 .DS_Store

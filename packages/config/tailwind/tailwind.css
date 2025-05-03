@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/container-queries";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {

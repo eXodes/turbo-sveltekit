@@ -26,7 +26,7 @@ export function getLayoutConfig(): PlopTypes.PlopGeneratorConfig {
     actions: [
       {
         type: "add",
-        path: "src/routes/{{ route }}/+layout.svelte",
+        path: "src/routes{{ route }}/+layout.svelte",
         templateFile: path.resolve(__dirname, "templates/filename.svelte.hbs"),
       },
       {
@@ -40,7 +40,7 @@ export function getLayoutConfig(): PlopTypes.PlopGeneratorConfig {
       },
       {
         type: "add",
-        path: "src/routes/{{ route }}/+layout.server.ts",
+        path: "src/routes{{ route }}/+layout.server.ts",
         templateFile: path.resolve(__dirname, "templates/filename.server.ts.hbs"),
         skip(data: PromptsData) {
           if (!data.load) return "";
@@ -49,7 +49,7 @@ export function getLayoutConfig(): PlopTypes.PlopGeneratorConfig {
       },
       {
         type: "add",
-        path: "tests/{{ route }}/+layout.spec.ts",
+        path: "tests{{ route }}/+layout.spec.ts",
         templateFile: path.resolve(__dirname, "templates/filename.spec.ts.hbs"),
       },
     ],

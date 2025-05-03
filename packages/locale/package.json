@@ -1,0 +1,52 @@
+{
+  "name": "locale",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./i18n-types": {
+      "types": "./src/i18n-types.ts",
+      "default": "./src/i18n-types.ts"
+    },
+    "./i18n-util": {
+      "types": "./src/i18n-util.ts",
+      "default": "./src/i18n-util.ts"
+    },
+    "./i18n-util.async": {
+      "types": "./src/i18n-util.async.ts",
+      "default": "./src/i18n-util.async.ts"
+    },
+    "./i18n-util.sync": {
+      "types": "./src/i18n-util.sync.ts",
+      "default": "./src/i18n-util.sync.ts"
+    },
+    "./i18n-svelte": {
+      "types": "./src/i18n-svelte.ts",
+      "default": "./src/i18n-svelte.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "typesafe-i18n --no-watch",
+    "check": "tsc --noEmit -p ./tsconfig.json",
+    "check:watch": "tsc --noEmit -p ./tsconfig.json --watch",
+    "clean": "rm -rf node_modules .turbo .svelte-kit dist",
+    "dev": "typesafe-i18n",
+    "lint": "eslint . --max-warnings 0 && publint",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "typesafe-i18n": "^5.26.2"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.8",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.25.1",
+    "eslint-config": "*",
+    "publint": "^0.3.12",
+    "turbo-utils": "*",
+    "typescript-config": "*",
+    "typescript-eslint": "^8.31.0"
+  }
+}
