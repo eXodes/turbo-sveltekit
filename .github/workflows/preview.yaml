@@ -19,6 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Create .env
+        run: |
+          cp ./apps/web/.env.example ./apps/web/.env
+          cp ./apps/docs/.env.example ./apps/docs/.env
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:

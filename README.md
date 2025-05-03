@@ -32,9 +32,11 @@ A Turbo monorepo repository with Sveltekit.
 | `eslint`                  | ![v9.25.1](https://img.shields.io/badge/npm-v9.25.1-blue) |
 | `husky`                   | ![v9.1.7](https://img.shields.io/badge/npm-v9.1.7-blue)   |
 | `js-cookie`               | ![v3.0.5](https://img.shields.io/badge/npm-v3.0.5-blue)   |
+| `nodemailer`              | ![v6.10.1](https://img.shields.io/badge/npm-v6.10.1-blue) |
 | `prettier`                | ![v3.5.3](https://img.shields.io/badge/npm-v3.5.3-blue)   |
 | `storybook`               | ![v8.6.12](https://img.shields.io/badge/npm-v8.6.12-blue) |
 | `svelte`                  | ![v5.28.2](https://img.shields.io/badge/npm-v5.28.2-blue) |
+| `svelte-email-tailwind`   | ![v2.1.1](https://img.shields.io/badge/npm-v2.1.1-blue)   |
 | `tailwindcss`             | ![v4.1.4](https://img.shields.io/badge/npm-v4.1.4-blue)   |
 | `turbo`                   | ![v2.5.2](https://img.shields.io/badge/npm-v2.5.2-blue)   |
 | `typesafe-i18n`           | ![v5.26.2](https://img.shields.io/badge/npm-v5.26.2-blue) |
