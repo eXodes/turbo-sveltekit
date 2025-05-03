@@ -1,11 +1,6 @@
 import type { PlopTypes } from "@turbo/gen";
 import path from "node:path";
-import {
-  type TargetGroup,
-  generateDirectoryPrompt,
-  generateExportPrompt,
-  generateNamePrompt,
-} from "turbo-utils/prompt";
+import { type TargetGroup, generateDirectoryPrompt, generateNamePrompt } from "turbo-utils/prompt";
 
 export function getEmailConfig(target: TargetGroup): PlopTypes.PlopGeneratorConfig {
   const isApp = target === "apps";
@@ -17,12 +12,10 @@ export function getEmailConfig(target: TargetGroup): PlopTypes.PlopGeneratorConf
     async prompts(inquirer) {
       const name = await inquirer.prompt([generateNamePrompt("email")]);
       const directory = await inquirer.prompt([generateDirectoryPrompt("email")]);
-      const exporting = await inquirer.prompt([generateExportPrompt()]);
 
       return {
         ...name,
         ...directory,
-        ...exporting,
       };
     },
     actions: [
