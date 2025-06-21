@@ -1,4 +1,3 @@
-import { enhancedImages } from "@sveltejs/enhanced-img";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import tailwindcss from "@tailwindcss/vite";
 import { svelteTesting } from "@testing-library/svelte/vite";
@@ -10,7 +9,7 @@ export default defineConfig({
       external: ["svelte", "bits-ui", "@internationalized/date"],
     },
   },
-  plugins: [tailwindcss(), enhancedImages(), svelte(), svelteTesting()],
+  plugins: [tailwindcss(), svelte(), svelteTesting()],
   resolve: process.env.VITEST ? { conditions: ["browser"] } : undefined,
   test: {
     globals: true,
