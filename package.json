@@ -1,5 +1,5 @@
 {
-  "name": "edda",
+  "name": "turbo-sveltekit",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -19,20 +19,20 @@
     "test:ci": "turbo run test:ci --continue"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "commitlint-config-monorepo": "^2.0.2",
     "husky": "^9.1.7",
     "is-ci": "^4.1.0",
     "prettier": "^3.5.3",
-    "prettier-plugin-packagejson": "^2.5.10",
-    "prettier-plugin-svelte": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "^2.5.2",
+    "prettier-plugin-packagejson": "^2.5.15",
+    "prettier-plugin-svelte": "^3.4.0",
+    "prettier-plugin-tailwindcss": "^0.6.13",
+    "turbo": "^2.5.4",
     "typescript": "^5.8.3"
   },
-  "packageManager": "npm@11.3.0",
+  "packageManager": "npm@11.4.2",
   "engines": {
     "node": ">=20"
   }

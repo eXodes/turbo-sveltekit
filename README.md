@@ -17,34 +17,34 @@ A Turbo monorepo repository with Sveltekit.
 - [x] [Commitlint](http://commitlint.js.org)
 - [x] [Conventional Commits](https://www.conventionalcommits.org)
 - [x] [Github Actions](https://github.com/features/actions)
-- [ ] [Semantic Release](https://semantic-release.gitbook.io)
 - [x] [Turbo Generator](https://turbo.build/repo/docs/guides/generating-code)
+- [x] [Trunk-Based Development](https://trunkbaseddevelopment.com/)
 
 ## Dependencies
 
-| Dependency                | Version                                                   |
-| ------------------------- | --------------------------------------------------------- |
-| `@commitlint/cli`         | ![v19.8.0](https://img.shields.io/badge/npm-v19.8.0-blue) |
-| `@internationalized/date` | ![v3.8.0](https://img.shields.io/badge/npm-v3.8.0-blue)   |
-| `@playwright/test`        | ![v1.52.0](https://img.shields.io/badge/npm-v1.52.0-blue) |
-| `@sveltejs/kit`           | ![v2.20.7](https://img.shields.io/badge/npm-v2.20.7-blue) |
-| `bits-ui`                 | ![v1.3.19](https://img.shields.io/badge/npm-v1.3.19-blue) |
-| `eslint`                  | ![v9.25.1](https://img.shields.io/badge/npm-v9.25.1-blue) |
-| `husky`                   | ![v9.1.7](https://img.shields.io/badge/npm-v9.1.7-blue)   |
-| `js-cookie`               | ![v3.0.5](https://img.shields.io/badge/npm-v3.0.5-blue)   |
-| `nodemailer`              | ![v6.10.1](https://img.shields.io/badge/npm-v6.10.1-blue) |
-| `prettier`                | ![v3.5.3](https://img.shields.io/badge/npm-v3.5.3-blue)   |
-| `storybook`               | ![v8.6.12](https://img.shields.io/badge/npm-v8.6.12-blue) |
-| `svelte`                  | ![v5.28.2](https://img.shields.io/badge/npm-v5.28.2-blue) |
-| `svelte-email-tailwind`   | ![v2.1.1](https://img.shields.io/badge/npm-v2.1.1-blue)   |
-| `tailwindcss`             | ![v4.1.4](https://img.shields.io/badge/npm-v4.1.4-blue)   |
-| `tailwind-variants`       | ![v1.0.0](https://img.shields.io/badge/npm-v1.0.0-blue)   |
-| `turbo`                   | ![v2.5.2](https://img.shields.io/badge/npm-v2.5.2-blue)   |
-| `typesafe-i18n`           | ![v5.26.2](https://img.shields.io/badge/npm-v5.26.2-blue) |
-| `typescript`              | ![v5.8.3](https://img.shields.io/badge/npm-v5.8.3-blue)   |
-| `vite`                    | ![v6.3.3](https://img.shields.io/badge/npm-v6.3.3-blue)   |
-| `vitest`                  | ![v3.1.2](https://img.shields.io/badge/npm-v3.1.2-blue)   |
-| `zod`                     | ![v3.24.3](https://img.shields.io/badge/npm-v3.24.3-blue) |
+| Dependency                | Version                                                     |
+| ------------------------- | ----------------------------------------------------------- |
+| `@commitlint/cli`         | ![v19.8.1](https://img.shields.io/badge/npm-v19.8.1-blue)   |
+| `@internationalized/date` | ![v3.8.2](https://img.shields.io/badge/npm-v3.8.2-blue)     |
+| `@playwright/test`        | ![v1.53.1](https://img.shields.io/badge/npm-v1.53.1-blue)   |
+| `@sveltejs/kit`           | ![v2.22.0](https://img.shields.io/badge/npm-v2.22.0-blue)   |
+| `bits-ui`                 | ![v2.8.7](https://img.shields.io/badge/npm-v2.8.7-blue)     |
+| `eslint`                  | ![v9.29.0](https://img.shields.io/badge/npm-v9.29.0-blue)   |
+| `husky`                   | ![v9.1.7](https://img.shields.io/badge/npm-v9.1.7-blue)     |
+| `js-cookie`               | ![v3.0.5](https://img.shields.io/badge/npm-v3.0.5-blue)     |
+| `nodemailer`              | ![v7.0.3](https://img.shields.io/badge/npm-v7.0.3-blue)     |
+| `prettier`                | ![v3.5.3](https://img.shields.io/badge/npm-v3.5.3-blue)     |
+| `storybook`               | ![v8.6.14](https://img.shields.io/badge/npm-v8.6.14-blue)   |
+| `svelte`                  | ![v5.34.7](https://img.shields.io/badge/npm-v5.34.7-blue)   |
+| `svelte-email-tailwind`   | ![v3.0.1](https://img.shields.io/badge/npm-v3.0.1-blue)     |
+| `tailwindcss`             | ![v4.1.10](https://img.shields.io/badge/npm-v4.1.10-blue)   |
+| `tailwind-variants`       | ![v1.0.0](https://img.shields.io/badge/npm-v1.0.0-blue)     |
+| `turbo`                   | ![v2.5.4](https://img.shields.io/badge/npm-v2.5.4-blue)     |
+| `typesafe-i18n`           | ![v5.26.2](https://img.shields.io/badge/npm-v5.26.2-blue)   |
+| `typescript`              | ![v5.8.3](https://img.shields.io/badge/npm-v5.8.3-blue)     |
+| `vite`                    | ![v6.3.5](https://img.shields.io/badge/npm-v6.3.5-blue)     |
+| `vitest`                  | ![v3.2.4](https://img.shields.io/badge/npm-v3.2.4-blue)     |
+| `zod`                     | ![v3.25.67](https://img.shields.io/badge/npm-v3.25.67-blue) |
 
 ## Folder Structure
 

@@ -13,6 +13,16 @@ const config = {
     // See https://svelte.dev/docs/kit/adapters for more information about adapters.
     adapter: adapter(),
   },
+
+  vitePlugin: {
+    dynamicCompileOptions({ filename, compileOptions }) {
+      // Enable runes for web files that are in legacy mode
+      // Temporary fix for sveltejs/svelte#16199
+      if (!filename.includes("node_modules") && !compileOptions.runes) {
+        return { runes: true };
+      }
+    },
+  },
 };
 
 export default config;
