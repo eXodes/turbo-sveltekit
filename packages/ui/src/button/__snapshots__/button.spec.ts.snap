@@ -1,10 +1,90 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Button > should render component 1`] = `
+exports[`Button > should render default button 1`] = `
 HTMLCollection [
   <button
-    class="inline-flex min-h-10 cursor-pointer items-center justify-center rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-orange-50 shadow-md shadow-orange-500/75 transition hover:bg-orange-500 active:scale-98 "
+    class="inline-flex min-h-10 cursor-pointer items-center justify-center rounded-lg font-semibold shadow-md transition active:scale-98 bg-gray-200 text-gray-800 hover:bg-gray-100 shadow-gray-300/75 px-4 py-2 text-sm"
     data-button-root="true"
+    tabindex="0"
+  >
+    <!---->
+    <!---->
+    <span>
+      Button
+    </span>
+    
+    
+    
+  </button>,
+]
+`;
+
+exports[`Button > should render large button 1`] = `
+HTMLCollection [
+  <button
+    class="inline-flex min-h-10 cursor-pointer items-center justify-center rounded-lg font-semibold shadow-md transition active:scale-98 bg-gray-200 text-gray-800 hover:bg-gray-100 shadow-gray-300/75 px-5 py-3 text-base"
+    data-button-root="true"
+    size="large"
+    tabindex="0"
+  >
+    <!---->
+    <!---->
+    <span>
+      Button
+    </span>
+    
+    
+    
+  </button>,
+]
+`;
+
+exports[`Button > should render medium button 1`] = `
+HTMLCollection [
+  <button
+    class="inline-flex min-h-10 cursor-pointer items-center justify-center rounded-lg font-semibold shadow-md transition active:scale-98 bg-gray-200 text-gray-800 hover:bg-gray-100 shadow-gray-300/75 px-4 py-2 text-sm"
+    data-button-root="true"
+    size="medium"
+    tabindex="0"
+  >
+    <!---->
+    <!---->
+    <span>
+      Button
+    </span>
+    
+    
+    
+  </button>,
+]
+`;
+
+exports[`Button > should render primary button 1`] = `
+HTMLCollection [
+  <button
+    class="inline-flex min-h-10 cursor-pointer items-center justify-center rounded-lg font-semibold shadow-md transition active:scale-98 bg-orange-600 text-orange-50 hover:bg-orange-500 shadow-orange-500/75 px-4 py-2 text-sm"
+    color="primary"
+    data-button-root="true"
+    tabindex="0"
+  >
+    <!---->
+    <!---->
+    <span>
+      Button
+    </span>
+    
+    
+    
+  </button>,
+]
+`;
+
+exports[`Button > should render small button 1`] = `
+HTMLCollection [
+  <button
+    class="inline-flex min-h-10 cursor-pointer items-center justify-center rounded-lg font-semibold shadow-md transition active:scale-98 bg-gray-200 text-gray-800 hover:bg-gray-100 shadow-gray-300/75 px-3 py-1.5 text-xs"
+    data-button-root="true"
+    size="small"
     tabindex="0"
   >
     <!---->

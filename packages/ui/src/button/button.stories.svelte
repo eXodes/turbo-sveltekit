@@ -10,9 +10,27 @@
   const { Story } = defineMeta({
     title: "UI/Button",
     component: Button,
+    parameters: {
+      docs: {
+        description: {
+          component: "Extending Bits UI Button Component",
+        },
+      },
+    },
     tags: ["autodocs"],
-    argTypes: {},
+    argTypes: {
+      color: {
+        control: { type: "select" },
+        options: ["default", "primary"],
+      },
+      size: {
+        control: { type: "select" },
+        options: ["small", "medium", "large"],
+      },
+    },
     args: {
+      color: "default",
+      size: "medium",
       children: createRawSnippet(() => ({
         render: () => "Click me",
       })),
@@ -21,5 +39,32 @@
   });
 </script>
 
-<!-- Extending Bits UI Button Component -->
 <Story name="Default" />
+
+<Story
+  name="Primary"
+  args={{
+    color: "primary",
+  }}
+/>
+
+<Story
+  name="Small"
+  args={{
+    size: "small",
+  }}
+/>
+
+<Story
+  name="Medium"
+  args={{
+    size: "medium",
+  }}
+/>
+
+<Story
+  name="Large"
+  args={{
+    size: "large",
+  }}
+/>

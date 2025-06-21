@@ -21,6 +21,7 @@
     "assets": "*",
     "bits-ui": "^1.3.19",
     "locale": "*",
+    "tailwind-variants": "^1.0.0",
     "typesafe-i18n": "^5.26.2",
     "ui": "*",
     "utils": "*",

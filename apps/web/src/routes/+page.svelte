@@ -22,6 +22,9 @@
 
   <div class="flex flex-col items-center gap-2">
     <p>{$LL.counter({ count: counter.count })}</p>
-    <Button onclick={() => counter.increment()}>{$LL.button()}</Button>
+    <Button
+      color="primary"
+      onclick={() => counter.increment()}>{$LL.button()}</Button
+    >
   </div>
 </div>

@@ -38,6 +38,7 @@ A Turbo monorepo repository with Sveltekit.
 | `svelte`                  | ![v5.28.2](https://img.shields.io/badge/npm-v5.28.2-blue) |
 | `svelte-email-tailwind`   | ![v2.1.1](https://img.shields.io/badge/npm-v2.1.1-blue)   |
 | `tailwindcss`             | ![v4.1.4](https://img.shields.io/badge/npm-v4.1.4-blue)   |
+| `tailwind-variants`       | ![v1.0.0](https://img.shields.io/badge/npm-v1.0.0-blue)   |
 | `turbo`                   | ![v2.5.2](https://img.shields.io/badge/npm-v2.5.2-blue)   |
 | `typesafe-i18n`           | ![v5.26.2](https://img.shields.io/badge/npm-v5.26.2-blue) |
 | `typescript`              | ![v5.8.3](https://img.shields.io/badge/npm-v5.8.3-blue)   |

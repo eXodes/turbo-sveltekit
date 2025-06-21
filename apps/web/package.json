@@ -26,6 +26,7 @@
     "locale": "*",
     "nodemailer": "^6.10.1",
     "svelte-email-tailwind": "^2.1.1",
+    "tailwind-variants": "^1.0.0",
     "typesafe-i18n": "^5.26.2",
     "ui": "*",
     "utils": "*",

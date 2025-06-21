@@ -5,11 +5,49 @@ import { createRawSnippet } from "svelte";
 import { describe, expect, test, vi } from "vitest";
 
 describe("Button", () => {
-  test("should render component", async () => {
+  const children = createRawSnippet(() => ({
+    render: () => `<span>Button</span>`,
+  }));
+
+  test("should render default button", async () => {
     const { container } = render(Button, {
-      children: createRawSnippet(() => ({
-        render: () => `<span>Button</span>`,
-      })),
+      children,
+    });
+
+    expect(container.children).toMatchSnapshot();
+  });
+
+  test("should render primary button", async () => {
+    const { container } = render(Button, {
+      children,
+      color: "primary",
+    });
+
+    expect(container.children).toMatchSnapshot();
+  });
+
+  test("should render small button", async () => {
+    const { container } = render(Button, {
+      children,
+      size: "small",
+    });
+
+    expect(container.children).toMatchSnapshot();
+  });
+
+  test("should render medium button", async () => {
+    const { container } = render(Button, {
+      children,
+      size: "medium",
+    });
+
+    expect(container.children).toMatchSnapshot();
+  });
+
+  test("should render large button", async () => {
+    const { container } = render(Button, {
+      children,
+      size: "large",
     });
 
     expect(container.children).toMatchSnapshot();
@@ -19,9 +57,7 @@ describe("Button", () => {
     const onclick = vi.fn();
 
     render(Button, {
-      children: createRawSnippet(() => ({
-        render: () => `<span>Button</span>`,
-      })),
+      children,
       onclick,
     });
 
