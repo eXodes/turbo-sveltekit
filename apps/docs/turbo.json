@@ -1,13 +1,4 @@
 {
   "extends": ["//"],
-  "tasks": {
-    "dev:cms": {
-      "cache": false,
-      "persistent": true
-    },
-    "emulators:auth": {
-      "cache": false,
-      "persistent": true
-    }
-  }
+  "tasks": {}
 }
